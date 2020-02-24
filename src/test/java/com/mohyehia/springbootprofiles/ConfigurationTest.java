@@ -1,5 +1,6 @@
 package com.mohyehia.springbootprofiles;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,5 +20,11 @@ public class ConfigurationTest {
     @Test
     public void testDevelopmentProfile(){
         assertThat(configuration.getName()).contains("development");
+    }
+
+    @Ignore
+    @Test
+    public void testProductionProfile(){
+        assertThat(configuration.getName()).contains("production");
     }
 }
